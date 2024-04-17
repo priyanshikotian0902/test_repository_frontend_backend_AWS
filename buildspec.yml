@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto17
+      # nodejs: 18
+            
+  build:
+    commands:
+      - cd s30project                  
+      - mvn clean install             
+      # - cd ../fitnessapp     
+      # - npm install                  
+      # - npm run build                 
+  post_build:
+    commands:
+      - echo Build completed          
+artifacts:
+  files:
+    - s30project/target/*.jar           
+    # - fitnessapp/build/**           
+    - scripts/*.sh                   
+    - appspec.yml                  
+  discard-paths: yes
