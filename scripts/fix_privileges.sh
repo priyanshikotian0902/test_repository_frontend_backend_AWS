@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
-chmod +x /home/ec2-user/server/* jar
-chmod +x /home/ec2-user/server/server_start.sh
-chmod +x /home/ec2-user/server/server_stop.sh
+
+# Change directory to where your server scripts are located
+cd /home/ec2-user/server
+
+# Set executable permissions for all scripts
+chmod +x *.sh
