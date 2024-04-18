@@ -20,8 +20,6 @@ artifacts:
     - fitnessapp/public/**/*         
     - fitnessapp/src/**/*                  
     - fitnessapp/package.json
-    - fitnessapp/package=lock.json
-    - fitnessapp/node_modules
     - appspec.yml
     - scripts/**/*                 
   
