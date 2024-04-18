@@ -10,8 +10,7 @@ phases:
       - npm install
             
   build:
-    commands:            
-      - cd fitnessapp                   
+    commands:                               
       - npm run build                 
   post_build:
     commands:
