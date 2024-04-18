@@ -17,9 +17,9 @@ phases:
       - echo Build completed          
 artifacts:
   files:           
-    - public/**/*         
-    - src/**/*                  
-    - package.json
+    - fitnessapp/public/**/*         
+    - fitnessapp/src/**/*                  
+    - fitnessapp/package.json
     - appspec.yml
     - scripts/**/*                 
   
