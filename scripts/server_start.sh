@@ -4,5 +4,5 @@
 cd /home/ec2-user/fitnessapp/
 
 # Start the frontend application
-sudo npm install
+sudo npm install > /dev/null 2>&1 &
 sudo npm start > /dev/null 2>&1 &
