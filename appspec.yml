@@ -3,7 +3,7 @@ os: linux
 
 files:
   - source: /
-    destination: /home/ec2-user/build
+    destination: /var/www/html   # Adjust destination directory as needed
 
 permissions:
   - object: /
@@ -26,5 +26,9 @@ hooks:
       runas: ec2-user
   ApplicationStop:
     - location: scripts/server_stop.sh
+      timeout: 20
+      runas: ec2-user
+  ApplicationRestart:
+    - location: scripts/restart_server.sh
       timeout: 20
       runas: ec2-user
