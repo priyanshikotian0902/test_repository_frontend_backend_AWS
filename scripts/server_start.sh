@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Change directory to where your frontend application is located
-cd /home/ec2-user/fitnessapp/build
+cd /home/ec2-user/server/fitnessapp/build
 
 # Start the frontend application
 sudo npm install
