@@ -13,7 +13,7 @@ const Login = () => {
 
     try {
       
-      const response = await axios.post("http://13.201.228.142:8089/users/login", {
+      const response = await axios.post("http://13.201.222.212:8089/users/login", {
         email,
         password,
       });
