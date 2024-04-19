@@ -18,7 +18,7 @@ class FoodTable extends Component {
   handleAddButton = async (food) => {
     try {
       console.log('Food object:', food);
-      const response = await axios.post('http://localhost:8089/plan', {
+      const response = await axios.post('http://13.201.222.212:8089/plan', {
         ...food,
         date: this.props.date.toISOString().split('T')[0], 
       });

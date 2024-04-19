@@ -29,7 +29,7 @@ class AddFoodToDatabase extends Component {
         };
 
         try {
-            const response = await axios.post('http://localhost:8089/addFood', newCustomizedFoodItemData);
+            const response = await axios.post('http://13.201.222.212:8089/addFood', newCustomizedFoodItemData);
             console.log('Food added successfully:', response.data);
             window.location.href = "/add-food";
         } catch (error) {

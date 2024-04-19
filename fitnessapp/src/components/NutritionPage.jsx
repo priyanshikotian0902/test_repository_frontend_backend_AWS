@@ -24,7 +24,7 @@ class NutritionDetailsPage extends Component {
 
   fetchFoodDataFromBackend = async () => {
     try {
-      const response = await axios.get(`http://localhost:8089/find?food=${this.state.queryValue}`);
+      const response = await axios.get(`http://13.201.222.212:8089/find?food=${this.state.queryValue}`);
       const dataFromBackend = response.data;
       this.setState({ displayedData: dataFromBackend });
     } catch (error) {
