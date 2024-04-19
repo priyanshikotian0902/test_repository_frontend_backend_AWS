@@ -22,7 +22,7 @@ class Graph extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8089/bmi')
+    axios.get('http://13.201.222.212:8089/bmi')
       .then(response => {
         const bmiData = response.data;
         const chartData = bmiData.map(data => data.bmiresult);
