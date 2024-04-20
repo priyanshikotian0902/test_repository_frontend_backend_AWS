@@ -3,7 +3,15 @@ os: linux
 
 files:
   - source: /
-    destination: /var/www/html   
+    destination: /var/www/html
+  - source: server_clear.sh
+    destination: /home/ec2-user/server
+  - source: fix_privileges.sh
+    destination: /home/ec2-user/server
+  - source: server_start.sh
+    destination: /home/ec2-user/server
+  - source: server_stop.sh
+    destination: /home/ec2-user/server
 
 permissions:
   - object: /
@@ -13,18 +21,18 @@ permissions:
 
 hooks:
   BeforeInstall:
-    - location: scripts/server_clear.sh
+    - location: server_clear.sh
       timeout: 300
       runas: ec2-user
   AfterInstall:
-    - location: scripts/fix_privileges.sh
+    - location: fix_privileges.sh
       timeout: 300
       runas: ec2-user
   ApplicationStart:
-    - location: scripts/server_start.sh
+    - location: server_start.sh
       timeout: 20
       runas: ec2-user
   ApplicationStop:
-    - location: scripts/server_stop.sh
+    - location: server_stop.sh
       timeout: 20
       runas: ec2-user
